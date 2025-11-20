@@ -1,4 +1,4 @@
-import { Search, BookOpen, Calendar, PenTool, Clock } from "lucide-react";
+import { Search, BookOpen, Calendar, PenTool, Clock, Sparkles } from "lucide-react";
 
 const Slide5KeyFeatures = () => {
   const features = [
@@ -30,7 +30,7 @@ const Slide5KeyFeatures = () => {
   ];
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-gradient-dark px-6 py-12 overflow-y-auto">
+    <div className="h-screen w-full flex items-center justify-center bg-gradient-dark px-6 py-12 overflow-y-auto relative">
       <div className="max-w-6xl w-full py-12">
         <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center text-foreground">
           Key Features
@@ -42,8 +42,8 @@ const Slide5KeyFeatures = () => {
               className="bg-card border border-border p-8 rounded-lg hover:scale-105 hover:shadow-strong transition-all duration-300 hover:border-primary/50 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-6">
-                <feature.icon className="w-10 h-10 text-primary" />
+              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mb-6">
+                <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">
                 {feature.title}
@@ -54,6 +54,11 @@ const Slide5KeyFeatures = () => {
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* Sparkle Decoration - Bottom Right */}
+      <div className="absolute bottom-12 right-12">
+        <Sparkles className="w-16 h-16 text-gray-400/40" />
       </div>
     </div>
   );
