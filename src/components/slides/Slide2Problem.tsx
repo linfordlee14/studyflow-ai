@@ -1,4 +1,4 @@
-import { XCircle } from "lucide-react";
+import { X, Sparkles } from "lucide-react";
 
 const Slide2Problem = () => {
   const problems = [
@@ -10,23 +10,28 @@ const Slide2Problem = () => {
   ];
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-gradient-dark px-6 py-12">
+    <div className="h-screen w-full flex items-center justify-center bg-gradient-dark px-6 py-12 relative">
       <div className="max-w-4xl w-full">
         <h2 className="text-5xl md:text-6xl font-bold mb-16 text-center text-foreground">
           The Problem
         </h2>
-        <div className="space-y-6">
+        <div className="space-y-8">
           {problems.map((problem, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-6 rounded-lg bg-card/50 border border-border/50 animate-fade-in-up"
+              className="flex items-center gap-6 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <XCircle className="w-8 h-8 text-warning flex-shrink-0 mt-1" />
+              <X className="w-12 h-12 text-red-500 flex-shrink-0" strokeWidth={3} />
               <p className="text-xl md:text-2xl text-foreground">{problem}</p>
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* Sparkle Decoration - Bottom Right */}
+      <div className="absolute bottom-12 right-12">
+        <Sparkles className="w-16 h-16 text-gray-400/40" />
       </div>
     </div>
   );
