@@ -1,73 +1,182 @@
-# Welcome to your Lovable project
+# StudyFlow Agent
 
-## Project info
+> Turn Any Topic Into a Personalized Study Plan in Minutes
 
-**URL**: https://lovable.dev/projects/e516dffd-3b3c-4888-b28c-36c40207a30b
+**A Hackathon 2025 Project by Athandile Tetyana & Linford Musiyambodza**
 
-## How can I edit this code?
+Powered by Perplexity Comet AI
 
-There are several ways of editing your application.
+## 🎯 Overview
 
-**Use Lovable**
+StudyFlow Agent is an AI-powered study assistant that automatically generates comprehensive, personalized study packages for any topic. In just 30 seconds, it transforms your study topic into a complete learning plan with smart research, structured summaries, personalized roadmaps, and self-assessment tools.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e516dffd-3b3c-4888-b28c-36c40207a30b) and start prompting.
+## ✨ Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **🔍 Smart Research**: Automatically finds and summarizes the best resources
+- **📚 Structured Learning**: Content organized by concepts, applications, and misconceptions
+- **📅 Personalized Roadmap**: 5-day study plan with time estimates
+- **✏️ Self-Assessment**: Practice quizzes and digital flashcards
+- **⏱️ Time Estimates**: Know exactly how long each task takes
 
-**Use your preferred IDE**
+## 🚀 Live Demo
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+[View Live Presentation](https://lovable.dev/projects/e516dffd-3b3c-4888-b28c-36c40207a30b)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 💻 Tech Stack
 
-Follow these steps:
+This project is built with modern web technologies:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (Radix UI)
+- **Icons**: Lucide React
+- **Routing**: React Router v6
+- **State Management**: TanStack Query
+
+## 🎨 Presentation Structure
+
+The application is a full-screen presentation with 9 slides:
+
+1. **Title Slide** - Introduction to StudyFlow Agent
+2. **The Problem** - Challenges students face
+3. **The Solution** - How StudyFlow Agent helps
+4. **How It Works** - Workflow diagram
+5. **Key Features** - Core functionality breakdown
+6. **Live Demo** - Real example (Black Rhino Conservation)
+7. **Impact & Use Cases** - Metrics and applications
+8. **Roadmap** - Future development plans
+9. **Get Started** - Team introduction and CTA
+
+### Navigation Controls:
+- **Keyboard**: Arrow keys (←/→ or ↑/↓), Home, End
+- **Mouse**: Click navigation buttons or slide indicators
+- **Touch**: Tap navigation buttons
+
+## 🛠️ Local Development
+
+### Prerequisites
+- Node.js 18+ and npm (or use [nvm](https://github.com/nvm-sh/nvm))
+
+### Installation
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate to project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Create optimized production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build locally
+npm run preview
+```
 
-## What technologies are used for this project?
+## 🌐 Deployment
 
-This project is built with:
+### Deploy to Vercel (Recommended)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. **Via Vercel CLI:**
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-## How can I deploy this project?
+# Deploy
+vercel
+```
 
-Simply open [Lovable](https://lovable.dev/projects/e516dffd-3b3c-4888-b28c-36c40207a30b) and click on Share -> Publish.
+2. **Via Vercel Dashboard:**
+- Push your code to GitHub
+- Import repository in [Vercel Dashboard](https://vercel.com/new)
+- Vercel will auto-detect Vite and configure correctly
+- Click "Deploy"
 
-## Can I connect a custom domain to my Lovable project?
+3. **Via Lovable:**
+- Click "Publish" button in Lovable editor
+- Or navigate to Project > Settings > Domains
 
-Yes, you can!
+### Environment Variables
+No environment variables required for basic deployment.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📁 Project Structure
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+src/
+├── components/
+│   ├── slides/           # Individual presentation slides
+│   │   ├── Slide1TitleSlide.tsx
+│   │   ├── Slide2Problem.tsx
+│   │   ├── Slide3Solution.tsx
+│   │   ├── Slide4HowItWorks.tsx
+│   │   ├── Slide5KeyFeatures.tsx
+│   │   ├── Slide6LiveDemo.tsx
+│   │   ├── Slide7Impact.tsx
+│   │   ├── Slide8Roadmap.tsx
+│   │   └── Slide9ThankYou.tsx
+│   ├── ui/               # Reusable UI components (shadcn)
+│   └── Presentation.tsx  # Main presentation container
+├── pages/
+│   ├── Index.tsx         # Home page
+│   └── NotFound.tsx      # 404 page
+├── assets/               # Images and static files
+├── lib/                  # Utility functions
+├── App.tsx               # App root component
+└── main.tsx              # Application entry point
+```
+
+## 👥 Team
+
+### Athandile Tetyana
+**Aspiring Software Developer**  
+[LinkedIn](https://linkedin.com/in/athandile-tetyana-639115343)
+
+### Linford Musiyambodza
+**Founder & Full-Stack Developer**  
+[LinkedIn](https://linkedin.com/in/linfordlee14)
+
+## 📋 Roadmap
+
+### Q1 2026
+- Mobile app
+- Study group collaboration
+
+### Q2 2026
+- AI tutor chatbot
+- Real-time progress tracking
+- Platform integrations
+
+### Q3 2026
+- Voice-based input
+- Community study resources
+
+## 📄 License
+
+This project was created for Hackathon 2025.
+
+## 🤝 Contributing
+
+This is a hackathon submission project. For questions or collaboration inquiries, please reach out to the team members via LinkedIn.
+
+## 🔗 Links
+
+- [Lovable Project](https://lovable.dev/projects/e516dffd-3b3c-4888-b28c-36c40207a30b)
+- [Documentation](https://docs.lovable.dev)
+
+---
+
+**Built with ❤️ using [Lovable](https://lovable.dev)**
